@@ -1,0 +1,23 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /
+    encoding:
+      enabled: true
+      charset: utf-8
+
+spring:
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3306/kotlinblog?serverTimezone=Asia/Seoul&useSSL=false&allPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: 1234
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
