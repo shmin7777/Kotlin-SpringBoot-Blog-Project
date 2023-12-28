@@ -20,4 +20,9 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
       hibernate:
+        default_batch_fetch_size: 1000
         dialect: org.hibernate.dialect.MySQLDialect
+        globally_quoted_identifiers: true
+        show_sql: true
+        format_sql: true
+    open-in-view: false
