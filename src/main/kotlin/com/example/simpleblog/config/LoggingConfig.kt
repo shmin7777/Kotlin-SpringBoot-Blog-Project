@@ -13,7 +13,7 @@ import java.util.*
 
 @EnableJpaAuditing
 @Configuration
-class JpaConfig {
+class LoggingConfig {
     @PostConstruct
     fun setLogMessageFormat() {
         P6SpyOptions.getActiveInstance().logMessageFormat = P6spyPrettySqlFormatter::class.java.name

@@ -39,7 +39,22 @@ class Member(
         return "Member(email='$email', password='$password', role=$role)"
     }
 
+    companion object {
+        fun createFakeMember(memberId: Long): Member {
+            val member = Member("", "", Role.USER)
+            member.id = memberId
+            return member
+        }
+    }
 
+}
+
+fun Member.toDto(): MemberRes {
+    return MemberRes(
+        id = this.id!!,
+        email = this.email,
+        password = this.password, role = this.role
+    )
 }
 
 enum class Role {
