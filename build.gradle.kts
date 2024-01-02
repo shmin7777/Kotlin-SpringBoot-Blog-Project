@@ -44,6 +44,12 @@ dependencies {
     // https://mvnrepository.com/artifact/io.github.serpro69/kotlin-faker
     implementation("io.github.serpro69:kotlin-faker:1.15.0") // 더미데이터용
 
+    // https://mvnrepository.com/artifact/com.github.gavlyukovskiy/p6spy-spring-boot-starter
+    implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.1") // logback
+    // https://mvnrepository.com/artifact/io.github.microutils/kotlin-logging
+    implementation("io.github.microutils:kotlin-logging:2.1.23")
+
+
 }
 
 tasks.withType<KotlinCompile> {

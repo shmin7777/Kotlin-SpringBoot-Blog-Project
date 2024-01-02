@@ -24,5 +24,10 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
         globally_quoted_identifiers: true
         show_sql: true
-        format_sql: true
+    #        format_sql: true
     open-in-view: false
+
+decorator:
+  datasource:
+    p6spy:
+      enable-logging: true
