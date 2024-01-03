@@ -54,6 +54,9 @@ dependencies {
     //querydsl
     implementation("com.querydsl:querydsl-jpa:5.0.0:jakarta")
     kapt("com.querydsl:querydsl-apt:5.0.0:jakarta")
+
+    implementation("org.springdoc:springdoc-openapi-ui:1.6.4")
+
 }
 
 tasks.withType<KotlinCompile> {

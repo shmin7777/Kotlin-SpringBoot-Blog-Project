@@ -1,6 +1,5 @@
 package com.example.simpleblog.domain.post
 
-import com.example.simpleblog.domain.member.QMember
 import com.example.simpleblog.domain.post.QPost.post
 import com.querydsl.jpa.impl.JPAQueryFactory
 import org.springframework.data.domain.Page
@@ -19,7 +18,7 @@ class PostCustomRepositoryImpl(
     private val queryFactory: JPAQueryFactory
 ) : PostCustomRepository {
     override fun findPosts(pageable: Pageable): Page<Post> {
-        val countQuery: Long = queryFactory.select(post.count()).from(QMember.member).fetchFirst()
+        val countQuery: Long = queryFactory.select(post.count()).from(post).fetchFirst()
 
         val results = queryFactory.selectFrom(post)
             .orderBy(post.id.desc())
